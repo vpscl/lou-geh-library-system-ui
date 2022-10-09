@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+
+<html lang="en" class="light-style layout-menu-fixed" dir="ltr" data-theme="theme-default" data-assets-path="../assets/"
+  data-template="vertical-menu-template-free">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport"
+    content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0" />
+
+  <title>Lou Geh Library System</title>
+
+  <meta name="description" content="" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="../assets/img/favicon/favicon.ico" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap"
+    rel="stylesheet" />
+
+  <link rel="stylesheet" href="../assets/vendor/fonts/boxicons.css" />
+
+  <!-- Core CSS -->
+  <link rel="stylesheet" href="../assets/vendor/css/core.css" class="template-customizer-core-css" />
+  <link rel="stylesheet" href="../assets/vendor/css/theme-default.css" class="template-customizer-theme-css" />
+  <link rel="stylesheet" href="../assets/css/custom.css" />
+
+  <!-- Vendors CSS -->
+  <link rel="stylesheet" href="../assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.css" />
+
+  <!-- Helpers -->
+  <script src="../assets/vendor/js/helpers.js"></script>
+
+</head>
+
+<body>
+  <!-- Layout wrapper -->
+  <div class="layout-wrapper layout-content-navbar">
+    <div class="layout-container">
+      <!-- Menu -->
+
+      <aside id="layout-menu" class="layout-menu menu-vertical menu bg-menu-theme">
+        <div class="app-brand demo">
+          <a href="index.html" class="app-brand-link">
+            <span class="app-brand-logo demo">
+              <i class='bx bxs-book-alt fs-2'></i>
+            </span>
+            <span class="app-brand-text demo menu-text fw-bolder ms-2">Lou Geh Library</span>
+          </a>
+
+          <a href="javascript:void(0);" class="layout-menu-toggle menu-link text-large ms-auto d-block d-xl-none">
+            <i class="bx bx-chevron-left bx-sm align-middle"></i>
+          </a>
+        </div>
+
+        <div class="menu-inner-shadow"></div>
+
+        <ul class="menu-inner py-1">
+          <!-- Dashboard -->
+          <li class="menu-item active">
+            <a href="index.html" class="menu-link">
+              <i class="menu-icon tf-icons bx bx-search-alt"></i>
+              <div>Search Books</div>
+            </a>
+          </li>
+          <li class="menu-item">
+            <a href="borrowed-books.html" class="menu-link">
+              <i class="menu-icon tf-icons bx bx-book-open"></i>
+              <div>Borrowed Books</div>
+            </a>
+        </ul>
+      </aside>
+      <!-- / Menu -->
+
+      <!-- Layout container -->
+      <div class="layout-page">
+        <!-- Navbar -->
+
+        <nav
+          class="layout-navbar container-xxl navbar navbar-expand-xl navbar-detached align-items-center bg-navbar-theme"
+          id="layout-navbar">
+          <div class="layout-menu-toggle navbar-nav align-items-xl-center me-3 me-xl-0 d-xl-none">
+            <a class="nav-item nav-link px-0 me-xl-4" href="javascript:void(0)">
+              <i class="bx bx-menu bx-sm"></i>
+            </a>
+          </div>
+
+          <div class="navbar-nav-right d-flex align-items-center" id="navbar-collapse">
+            <!-- Search -->
+            <div class="navbar-nav align-items-center">
+              <div class="nav-item d-flex align-items-center">
+                <i class="bx bx-search fs-4 lh-0"></i>
+                <input type="text" class="form-control border-0 shadow-none" placeholder="Search..."
+                  aria-label="Search..." />
+              </div>
+            </div>
+            <!-- /Search -->
+
+            <ul class="navbar-nav flex-row align-items-center ms-auto">
+
+              <!-- Reader -->
+              <li class="nav-item navbar-dropdown dropdown-user dropdown">
+                <a class="nav-link dropdown-toggle hide-arrow" href="javascript:void(0);" data-bs-toggle="dropdown">
+                  <div class="avatar avatar-online">
+                    <img src="../assets/img/avatars/7.png" alt class="w-px-40 h-auto rounded-circle" />
+                  </div>
+                </a>
+                <ul class="dropdown-menu dropdown-menu-end">
+                  <li>
+                    <a class="dropdown-item" href="#">
+                      <div class="d-flex">
+                        <div class="flex-shrink-0 me-3">
+                          <div class="avatar avatar-online">
+                            <img src="../assets/img/avatars/7.png" alt class="w-px-40 h-auto rounded-circle" />
+                          </div>
+                        </div>
+                        <div class="flex-grow-1">
+                          <span class="fw-semibold d-block">Robert Downey Jr.</span>
+                          <small class="text-muted">Reader</small>
+                        </div>
+                      </div>
+                    </a>
+                  </li>
+                  <li>
+                    <div class="dropdown-divider"></div>
+                  </li>
+              </li>
+              <li>
+                <a class="dropdown-item" href="../">
+                  <i class="bx bx-power-off me-2"></i>
+                  <span class="align-middle">Log Out</span>
+                </a>
+              </li>
+            </ul>
+            </li>
+            <!--/ Reader -->
+            </ul>
+          </div>
+        </nav>
+
+        <!-- / Navbar -->
+
+        <!-- Content wrapper -->
+        <div class="content-wrapper">
+          <!-- Content -->
+
+          <div class="container-xxl flex-grow-1 container-p-y">
+
+            <!-- Responsive Table -->
+            <!-- <div class="card">
+              <div class="card-header d-flex">
+                <button class="btn btn-primary ms-auto">Add Book</button>
+              </div>
+              <div class="table-responsive text-nowrap">
+                <table class="table table-striped table-hover">
+                  <thead>
+                    <tr class="text-nowrap">
+                      <th>Title</th>
+                      <th>ISBN</th>
+                      <th>Author</th>
+                      <th>Publisher</th>
+                      <th>No. of Copies</th>
+                      <th>Categories</th>
+                      <th>Publication Year</th>
+                      <th>No. of Pages</th>
+                      <th>Shelf</th>
+                      <th>Actions</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>Dr. Jekyll and Mr. Hyde</td>
+                      <td>978-0553212778</td>
+                      <td>Robert Louis Stevenson </td>
+                      <td>Bantam Classics</td>
+                      <td>7</td>
+                      <td>
+                        <span class="badge bg-label-dark me-1">Fiction</span>
+                        <span class="badge bg-label-dark me-1">Classic Literature</span>
+                      </td>
+                      <td>1866</td>
+                      <td>112 pages</td>
+                      <td>13</td>
+                      <td>
+                        <div class="dropdown">
+                          <button type="button" class="btn p-0 dropdown-toggle hide-arrow" data-bs-toggle="dropdown">
+                            <i class="bx bx-dots-vertical-rounded"></i>
+                          </button>
+                          <div class="dropdown-menu">
+                            <a class="dropdown-item" href="javascript:void(0);"><i class="bx bx-edit-alt me-1"></i>
+                              Update</a>
+                            <a class="dropdown-item" href="javascript:void(0);"><i class="bx bx-trash me-1"></i>
+                              Remove</a>
+                          </div>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>Dr. Jekyll and Mr. Hyde</td>
+                      <td>978-0553212778</td>
+                      <td>Robert Louis Stevenson </td>
+                      <td>Bantam Classics</td>
+                      <td>7</td>
+                      <td>
+                        <span class="badge bg-label-dark me-1">Fiction</span>
+                        <span class="badge bg-label-dark me-1">Classic Literature</span>
+                      </td>
+                      <td>1866</td>
+                      <td>112 pages</td>
+                      <td>13</td>
+                      <td>
+                        <div class="dropdown">
+                          <button type="button" class="btn p-0 dropdown-toggle hide-arrow" data-bs-toggle="dropdown">
+                            <i class="bx bx-dots-vertical-rounded"></i>
+                          </button>
+                          <div class="dropdown-menu">
+                            <a class="dropdown-item" href="javascript:void(0);"><i class="bx bx-edit-alt me-1"></i>
+                              Update</a>
+                            <a class="dropdown-item" href="javascript:void(0);"><i class="bx bx-trash me-1"></i>
+                              Remove</a>
+                          </div>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>Dr. Jekyll and Mr. Hyde</td>
+                      <td>978-0553212778</td>
+                      <td>Robert Louis Stevenson </td>
+                      <td>Bantam Classics</td>
+                      <td>7</td>
+                      <td>
+                        <span class="badge bg-label-dark me-1">Fiction</span>
+                        <span class="badge bg-label-dark me-1">Classic Literature</span>
+                      </td>
+                      <td>1866</td>
+                      <td>112 pages</td>
+                      <td>13</td>
+                      <td>
+                        <div class="dropdown">
+                          <button type="button" class="btn p-0 dropdown-toggle hide-arrow" data-bs-toggle="dropdown">
+                            <i class="bx bx-dots-vertical-rounded"></i>
+                          </button>
+                          <div class="dropdown-menu">
+                            <a class="dropdown-item" href="javascript:void(0);"><i class="bx bx-edit-alt me-1"></i>
+                              Update</a>
+                            <a class="dropdown-item" href="javascript:void(0);"><i class="bx bx-trash me-1"></i>
+                              Remove</a>
+                          </div>
+                        </div>
+                      </td>
+                    </tr>
+                    
+                  </tbody>
+                </table>
+              </div>
+            </div> -->
+
+            <div class="col-md">
+              <small class="text-light fw-semibold">Search Results</small>
+              <div id="accordionIcon" class="accordion mt-3 accordion-without-arrow">
+
+                <div class="accordion-item card active">
+
+                  <h2 class="accordion-header text-body d-flex justify-content-between" id="accordionIconOne">
+                    <button type="button" class="accordion-button fs-4" data-bs-toggle="collapse"
+                      data-bs-target="#accordionIcon-1" aria-expanded="true" aria-controls="accordionIcon-1">
+                      Dr. Jekyll and Mr. Hyde
+                    </button>
+
+                  </h2>
+
+                  <div id="accordionIcon-1" class="accordion-collapse collapse show" data-bs-parent="#accordionIcon">
+                    <div class="accordion-body pb-3">
+                      <div class="badge bg-label-success">Available: <b>3</b></div>
+                      <small class="d-block mt-3">
+                        Robert Louis Stevenson originally wrote Dr. Jekyll And Mr Hyde as a "chilling shocker." He then
+                        burned the draft and, upon his wife's advice, rewrote it as the darkly complex tale it is today.
+                        Stark, skillfully woven, this fascinating novel explores the curious turnings of human character
+                        through the strange case of Dr. Jekyll, a kindly scientist who by night takes on his stunted
+                        evil self, Mr. Hyde. Anticipating modern psychology, Jekyll And Hyde is a brilliantly original
+                        study of man's dual nature -- as well as an immortal tale of suspense and terror. Published in
+                        1866, Jekyll And Hyde was an instant success and brought Stevenson his first taste of fame.
+                        Though sometimes dismissed as a mere mystery story, the book has evoked much literary
+                        admirations. Vladimir Nabokov likened it to Madame Bovary and Dead Souls as "a fable that lies
+                        nearer to poetry than to ordinary prose fiction."
+                      </small>
+                      <div class="pb-5 position-relative">
+                        <div class="demo-inline-spacing">
+                          <div class="list-group list-group-flush">
+                            <div class="list-group-item list-group-item-action">
+                              <span class="fw-bold">ISBN:</span> 978-0553212778
+                            </div>
+                            <div class="list-group-item list-group-item-action">
+                              <span class="fw-bold">Author:</span> Robert Louis Stevenson
+                            </div>
+                            <div class="list-group-item list-group-item-action">
+                              <span class="fw-bold">Publisher:</span> Bantam Classics
+                            </div>
+                            <div class="list-group-item list-group-item-action">
+                              <span class="fw-bold">Publication Year:</span> 1866
+                            </div>
+                            <div class="list-group-item list-group-item-action">
+                              <span class="fw-bold">Categories:</span>
+                              <span class="badge bg-label-dark">Fiction</span>
+                              <span class="badge bg-label-dark">Classic Literature</span>
+
+                            </div>
+                            <div class="list-group-item list-group-item-action">
+                              <span class="fw-bold">No. of Pages:</span> 112
+                            </div>
+                            <div class="list-group-item list-group-item-action">
+                              <span class="fw-bold">Shelf:</span> 13
+                            </div>
+                          </div>
+                        </div>
+
+                        <a href="borrowed-books.html"
+                          class="btn rounded-pill btn-outline-primary position-absolute bottom-0 start-50 translate-middle-x">
+                          Borrow
+                        </a>
+                      </div>
+
+                    </div>
+                  </div>
+                </div>
+
+
+                <div class="accordion-item card">
+                  <h2 class="accordion-header text-body d-flex justify-content-between" id="accordionIconTwo">
+                    <button type="button" class="accordion-button collapsed fs-4" data-bs-toggle="collapse"
+                      data-bs-target="#accordionIcon-2" aria-controls="accordionIcon-2">
+                      Remarkably Bright Creatures: A Novel
+                    </button>
+                  </h2>
+                  <div id="accordionIcon-2" class="accordion-collapse collapse" data-bs-parent="#accordionIcon">
+                    <div class="accordion-body">
+                      <div class="badge bg-label-secondary">Not Available</div>
+                      <small class="d-block mt-3">
+                        What does a misanthropic octopus have in common with Tova, a widowed aquarium employee? Not
+                        much, until a friendship develops following a daring tank rescue, and Marcellus McSquiddles
+                        happily uses all eight of his tentacles, his three hearts, plus his sharp brain, to solve the
+                        soul-scarring mystery of Tova’s son Erik’s disappearance thirty years ago. Utterly original,
+                        funny, wise, and heartwarming (be warned: there’ll be tears as well as giggles), Remarkably
+                        Bright Creatures will have readers falling hard for an acerbic invertebrate whose intervention
+                        in his new friend’s life sets her up for healing lessons in love, loss, and family.
+                      </small>
+
+                      <div class="demo-inline-spacing">
+                        <div class="list-group list-group-flush">
+                          <div class="list-group-item list-group-item-action">
+                            <span class="fw-bold">ISBN:</span> 978-0063242401
+                          </div>
+                          <div class="list-group-item list-group-item-action">
+                            <span class="fw-bold">Author:</span> Shelby Van Pelt
+                          </div>
+                          <div class="list-group-item list-group-item-action">
+                            <span class="fw-bold">Publisher:</span> Ecco
+                          </div>
+                          <div class="list-group-item list-group-item-action">
+                            <span class="fw-bold">Publication Year:</span> 2022
+                          </div>
+                          <div class="list-group-item list-group-item-action">
+                            <span class="fw-bold">Categories:</span>
+                            <span class="badge bg-label-dark">Humorous Fiction</span>
+
+                          </div>
+                          <div class="list-group-item list-group-item-action">
+                            <span class="fw-bold">No. of Pages:</span> 528
+                          </div>
+                          <div class="list-group-item list-group-item-action">
+                            <span class="fw-bold">Shelf:</span> 7
+                          </div>
+                        </div>
+                      </div>
+
+
+                    </div>
+                  </div>
+                </div>
+
+
+                <div class="accordion-item card">
+                  <h2 class="accordion-header text-body d-flex justify-content-between" id="accordionIconThree">
+                    <button type="button" class="accordion-button collapsed fs-4" data-bs-toggle="collapse"
+                      data-bs-target="#accordionIcon-3" aria-controls="accordionIcon-3">
+                      The Jesus Storybook Bible: Every Story Whispers His Name
+                    </button>
+                  </h2>
+
+                  <div id="accordionIcon-3" class="accordion-collapse collapse" data-bs-parent="#accordionIcon">
+                    <div class="accordion-body pb-3">
+                      <div class="badge bg-label-success">Available: <b>7</b></div>
+                      <small class="d-block mt-3">
+                        For over a decade, The Jesus Storybook Bible has been introducing children to God’s wonderful
+                        story, and the Savior at the center of that story. Trusted and treasured for over a decade, with
+                        over 3 million copies sold, The Jesus Storybook Bible is the quintessential book for parents,
+                        grandparents, pastors, and anyone else who wants to share God’s Never Stopping, Never Giving Up,
+                        Unbreaking, Always and Forever Love with children.
+                      </small>
+                      <div class="pb-5 position-relative">
+                        <div class="demo-inline-spacing">
+                          <div class="list-group list-group-flush">
+                            <div class="list-group-item list-group-item-action">
+                              <span class="fw-bold">ISBN:</span> 978-0310708254
+                            </div>
+                            <div class="list-group-item list-group-item-action">
+                              <span class="fw-bold">Author:</span> Sally Lloyd-Jones
+                            </div>
+                            <div class="list-group-item list-group-item-action">
+                              <span class="fw-bold">Publisher:</span> ZonderKidz
+                            </div>
+                            <div class="list-group-item list-group-item-action">
+                              <span class="fw-bold">Publication Year:</span> 2007
+                            </div>
+                            <div class="list-group-item list-group-item-action">
+                              <span class="fw-bold">Categories:</span>
+                              <span class="badge bg-label-dark">Christian</span>
+
+                            </div>
+                            <div class="list-group-item list-group-item-action">
+                              <span class="fw-bold">No. of Pages:</span> 352
+                            </div>
+                            <div class="list-group-item list-group-item-action">
+                              <span class="fw-bold">Shelf:</span> 3
+                            </div>
+                          </div>
+                        </div>
+
+                        <a href="borrowed-books.html"
+                          class="btn rounded-pill btn-outline-primary position-absolute bottom-0 start-50 translate-middle-x">
+                          Borrow
+                        </a>
+                      </div>
+
+                    </div>
+                  </div>
+                </div>
+
+                <div class="accordion-item card">
+                  <h2 class="accordion-header text-body d-flex justify-content-between" id="accordionIconFour">
+                    <button type="button" class="accordion-button collapsed fs-4" data-bs-toggle="collapse"
+                      data-bs-target="#accordionIcon-4" aria-controls="accordionIcon-4">
+                      Hollywood Heroes: How Your Favorite Movies Reveal God
+                    </button>
+                  </h2>
+
+                  <div id="accordionIcon-4" class="accordion-collapse collapse" data-bs-parent="#accordionIcon">
+                    <div class="accordion-body pb-3">
+                      <div class="badge bg-label-success">Available: <b>4</b></div>
+                      <small class="d-block mt-3">
+                        Captain America assembles the Avengers. Iron Man battles Thanos. Luke Skywalker duels Darth
+                        Vader. Aragorn charges Mordor. Batman confronts the Joker. Superman destroys Doomsday. Wonder
+                        Woman defeats Ares. We are captivated. Why?
+
+                        We are entranced by stories that take us to a world where heroes fight evil and sacrifice
+                        themselves for a greater good because we long for our world to be free from pain, suffering, and
+                        struggle. That’s the real hope and promise of Jesus―when He returns to set things right.
+                      </small>
+                      <div class="pb-5 position-relative">
+                        <div class="demo-inline-spacing">
+                          <div class="list-group list-group-flush">
+                            <div class="list-group-item list-group-item-action">
+                              <span class="fw-bold">ISBN:</span> 978-1641583510
+                            </div>
+                            <div class="list-group-item list-group-item-action">
+                              <span class="fw-bold">Author:</span> Frank Turek
+                            </div>
+                            <div class="list-group-item list-group-item-action">
+                              <span class="fw-bold">Publisher:</span> NavPress
+                            </div>
+                            <div class="list-group-item list-group-item-action">
+                              <span class="fw-bold">Publication Year:</span> 2022
+                            </div>
+                            <div class="list-group-item list-group-item-action">
+                              <span class="fw-bold">Categories:</span>
+                              <span class="badge bg-label-dark">Comic & Graphic Novel Literary Criticism</span>
+                              <span class="badge bg-label-dark">Christian</span>
+
+                            </div>
+                            <div class="list-group-item list-group-item-action">
+                              <span class="fw-bold">No. of Pages:</span> 256
+                            </div>
+                            <div class="list-group-item list-group-item-action">
+                              <span class="fw-bold">Shelf:</span> 3
+                            </div>
+                          </div>
+                        </div>
+
+                        <a href="borrowed-books.html"
+                          class="btn rounded-pill btn-outline-primary position-absolute bottom-0 start-50 translate-middle-x">
+                          Borrow
+                        </a>
+                      </div>
+
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+          <!-- / Content -->
+
+
+          <div class="content-backdrop fade"></div>
+        </div>
+        <!-- Content wrapper -->
+      </div>
+      <!-- / Layout page -->
+    </div>
+
+    <!-- Overlay -->
+    <div class="layout-overlay layout-menu-toggle"></div>
+  </div>
+  <!-- / Layout wrapper -->
+
+  <script src="../assets/vendor/libs/jquery/jquery.js"></script>
+  <script src="../assets/vendor/libs/popper/popper.js"></script>
+  <script src="../assets/vendor/js/bootstrap.js"></script>
+  <script src="../assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.js"></script>
+  <script src="../assets/vendor/js/menu.js"></script>
+
+  <!-- Main JS -->
+  <script src="../assets/js/main.js"></script>
+
+</body>
+
+</html>
